@@ -11,4 +11,10 @@ class ProductsController extends Controller
         $products = DB::table('products')->get();
         return view('index')->with('products',$products);
     }
+
+    public function showDetails(Request $req){
+        $id = $req->route('id');
+        $item = DB::table('products')->where("id",$id)->get();
+        return view('details')->with('item',$item);
+    }
 }

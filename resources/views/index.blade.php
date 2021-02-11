@@ -16,7 +16,7 @@
     <section class="home-section">
         @include('includes.navbar')
         <h1>
-            Va prezentam cele top cele mai interesante carti <br>
+            Va prezentam top cele mai interesante carti <br>
         </h1>
     </section>
     <div class="container">
@@ -29,7 +29,7 @@
                 <p class="text-muted .text-danger">{{$product->price}} lei</p>
                 <div class="card-buttons">
                     <div>
-                        <a class="btn btn-primary" href="#" role="button">View details &raquo;</a>
+                        <a class="btn btn-primary" href="/details/{{$product->id}}" role="button">Vezi detalii &raquo;</a>
                     </div>
                     <div>
                         <form action="{{ route('add-to-cart') }}" method="post">
